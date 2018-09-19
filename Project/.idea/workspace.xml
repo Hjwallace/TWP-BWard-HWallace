@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5daf2643-25de-414a-82ba-bf621c3d6647" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/testingData.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/edu/bsu/cs222/testJSONData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/edu/bsu/cs222/testJSONData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/edu/bsu/cs222/testingData" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/edu/bsu/cs222/testJSONData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/edu/bsu/cs222/testJSONData.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -18,16 +21,19 @@
     <session id="1881070569">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="TODO List" value="1" />
-          <entry key="java" value="2" />
+          <entry key="TODO List" value="2" />
+          <entry key="class" value="1" />
+          <entry key="java" value="3" />
           <entry key="testData" value="2" />
           <entry key="testDataV2" value="2" />
           <entry key="testingData" value="1" />
@@ -36,26 +42,28 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="2" />
+          <entry key="CLASS" value="1" />
+          <entry key="JAVA" value="3" />
           <entry key="JSON" value="3" />
-          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="PLAIN_TEXT" value="2" />
           <entry key="XML" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="TODO List" value="500" />
-          <entry key="java" value="428" />
+          <entry key="java" value="456" />
           <entry key="testData" value="34" />
-          <entry key="xml" value="18" />
+          <entry key="testingData" value="114" />
+          <entry key="xml" value="37" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="428" />
-          <entry key="JSON" value="34" />
+          <entry key="JAVA" value="456" />
+          <entry key="JSON" value="148" />
           <entry key="PLAIN_TEXT" value="500" />
-          <entry key="XML" value="18" />
+          <entry key="XML" value="37" />
         </counts>
       </usages-collector>
     </session>
@@ -65,17 +73,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+            <state relative-caret-position="87">
+              <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/edu/bsu/cs222/testJSONData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="36" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
+            <state relative-caret-position="193">
+              <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -84,10 +92,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/edu/bsu/cs222/testingData">
+        <entry file="jar://$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.8.5/gson-2.8.5-sources.jar!/com/google/gson/JsonParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="33" column="34" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
+            <state relative-caret-position="149">
+              <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/testingData.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="358">
+              <caret line="35" column="1" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -110,9 +127,11 @@
         <option value="$PROJECT_DIR$/src/main/resources/testData" />
         <option value="$PROJECT_DIR$/src/main/java/TODO List" />
         <option value="$PROJECT_DIR$/src/test/java/testJSONData.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/edu/bsu/cs222/testingData" />
+        <option value="$PROJECT_DIR$/src/test/resources/testingData" />
+        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/edu/bsu/cs222/testJSONData.java" />
+        <option value="$PROJECT_DIR$/src/test/resources/testingData.json" />
       </list>
     </option>
   </component>
@@ -134,6 +153,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
@@ -193,19 +214,29 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="cs222" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="WikiSearcher" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537199458494" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537371781195" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/resources" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -219,7 +250,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.All in Project">
+  <component name="RunManager" selected="JUnit.testJSONData">
     <configuration name="All in Project" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project" />
       <option name="PACKAGE_NAME" value="" />
@@ -248,8 +279,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in Project" />
         <item itemvalue="JUnit.testJSONData" />
+        <item itemvalue="JUnit.All in Project" />
       </list>
     </recent_temporary>
   </component>
@@ -267,26 +298,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="testJSONData - 2018.09.17 at 11h 40m 02s.xml">
+    <history-entry file="testJSONData - 2018.09.19 at 11h 16m 21s.xml">
       <configuration name="testJSONData" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="testJSONData - 2018.09.17 at 11h 42m 52s.xml">
+    <history-entry file="testJSONData - 2018.09.19 at 11h 19m 16s.xml">
       <configuration name="testJSONData" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="testJSONData - 2018.09.17 at 11h 45m 14s.xml">
+    <history-entry file="testJSONData - 2018.09.19 at 11h 20m 02s.xml">
       <configuration name="testJSONData" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="testJSONData - 2018.09.17 at 11h 46m 40s.xml">
+    <history-entry file="testJSONData - 2018.09.19 at 11h 26m 33s.xml">
       <configuration name="testJSONData" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="testJSONData - 2018.09.17 at 11h 47m 14s.xml">
+    <history-entry file="testJSONData - 2018.09.19 at 11h 27m 26s.xml">
       <configuration name="testJSONData" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_Project - 2018.09.17 at 11h 49m 21s.xml">
-      <configuration name="All in Project" configurationId="JUnit" />
+    <history-entry file="testJSONData - 2018.09.19 at 11h 27m 31s.xml">
+      <configuration name="testJSONData" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_Project - 2018.09.17 at 11h 49m 54s.xml">
-      <configuration name="All in Project" configurationId="JUnit" />
+    <history-entry file="testJSONData - 2018.09.19 at 11h 34m 14s.xml">
+      <configuration name="testJSONData" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="testJSONData - 2018.09.19 at 11h 35m 32s.xml">
+      <configuration name="testJSONData" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="testJSONData - 2018.09.19 at 11h 35m 56s.xml">
+      <configuration name="testJSONData" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="testJSONData - 2018.09.19 at 11h 40m 19s.xml">
+      <configuration name="testJSONData" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -302,7 +342,7 @@
     <frame x="0" y="23" width="1440" height="830" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2532189" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26037195" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -310,17 +350,17 @@
       <window_info id="UI Designer" order="5" />
       <window_info id="Learn" order="6" />
       <window_info id="Favorites" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" weight="0.3292683" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3292683" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3292683" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49928468" visible="true" weight="0.3292683" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39972898" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3292683" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5007153" side_tool="true" weight="0.3292683" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.3292683" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -335,20 +375,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/TODO List">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/src.zip!/java/io/InputStreamReader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
@@ -356,9 +382,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/edu/bsu/cs222/testDataV2">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/edu/bsu/cs222/testDataV2" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/testData">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
@@ -366,20 +390,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/edu/bsu/cs222/testingData">
+    <entry file="file://$PROJECT_DIR$/src/main/java/TODO List">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="34" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
+        <state relative-caret-position="120">
+          <caret line="8" column="27" lean-forward="true" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.8.5/gson-2.8.5.jar!/com/google/gson/JsonParser.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.8.5/gson-2.8.5-sources.jar!/com/google/gson/JsonParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/edu/bsu/cs222/testJSONData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="36" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
+        <state relative-caret-position="193">
+          <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/testingData.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="35" column="1" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
         </state>
       </provider>
     </entry>

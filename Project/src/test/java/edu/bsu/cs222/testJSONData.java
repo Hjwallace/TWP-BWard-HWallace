@@ -2,6 +2,7 @@ package edu.bsu.cs222;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
+import com.google.gson.stream.JsonReader;
 import jdk.nashorn.internal.parser.JSONParser;
 import jdk.nashorn.internal.parser.Parser;
 import org.junit.Assert;
@@ -21,10 +22,9 @@ public class testJSONData {
         InputStream inputStream = getClass().getClassLoader().getResourceAsStream("testingData.json");
         Reader reader = new InputStreamReader(inputStream);
         JsonElement rootElement = parser.parse(reader);
-        //JsonObject rootObject = rootElement.getAsJsonObject();
-        //JsonObject pages = rootObject.getAsJsonObject("query").getAsJsonObject("pages");
-        //Assert.assertNotNull(pages);
-        Assert.assertNotNull(rootElement);
+        JsonObject rootObject = rootElement.getAsJsonObject();
+        JsonObject pages = rootObject.getAsJsonObject("query").getAsJsonObject("pages");
+        Assert.assertNotNull(pages);
 
     }
 
