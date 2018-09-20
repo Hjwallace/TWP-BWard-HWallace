@@ -27,11 +27,12 @@ public class testJSONData {
         JsonObject rootObject = rootElement.getAsJsonObject();
         JsonObject pages = rootObject.getAsJsonObject("query").getAsJsonObject("pages");
         JsonArray array = null;
-        for (Map.Entry<String.JsonElement> entry : pages.entrySet()){
+        for (Map.Entry<String,JsonElement> entry : pages.entrySet()){
             JsonObject entryObject = entry.getValue().getAsJsonObject();
-            JsonArray array = entryObject.getAsJsonArray("revisions");
+            array = entryObject.getAsJsonArray("revisions");
+            //Assert.assertNotNull(array);
         }
-        Assert.assertNotNull(pages);
+        Assert.assertEquals(4,array.size());
 
 
     }
