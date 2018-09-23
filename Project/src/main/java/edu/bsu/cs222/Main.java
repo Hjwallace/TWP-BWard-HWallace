@@ -22,6 +22,9 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
+        int width = 700;
+        int height = 400;
+
         //VBox parent = new VBox();
         //parent.getChildren().add(new Label("Hello World"));
 
@@ -43,18 +46,28 @@ public class Main extends Application {
         //primaryStage.setScene(new Scene(parent,700,400));
         //primaryStage.show();
 
-        //Step 1: Make Grandparent
-        HBox mainWindow = new HBox();
-        //Step 2: Make User Side of window
-        VBox userSide = new VBox();
-        //Step 3: Add componets to userSide
+        HBox mainWindow = new HBox(20);
+
+        VBox userSide = new VBox(20);
+
         Label title = new Label("I am a title");
         Label description = new Label("Put Text below me");
         TextField textField = new TextField();
         Button subButton = new Button("Click me to do something");
         userSide.getChildren().addAll(title,description,textField,subButton);
+        userSide.setAlignment(Pos.CENTER_LEFT);
 
-        primaryStage.setScene(new Scene(userSide));//Place screen dimensions
+        VBox outPutWindow = new VBox();
+
+        TextField outPut = new TextField();
+        outPutWindow.getChildren().add(outPut);
+        outPutWindow.setAlignment(Pos.CENTER_RIGHT);
+
+        Line seperator = LineBuilder.create().startX(width/2).startY(0).endX(width/2).endY(height).fill(Color.BLACK).build();
+
+        mainWindow.getChildren().addAll(userSide,seperator,outPutWindow);
+
+        primaryStage.setScene(new Scene(mainWindow,width,height));//Place screen dimensions
         primaryStage.show();
 
     }
