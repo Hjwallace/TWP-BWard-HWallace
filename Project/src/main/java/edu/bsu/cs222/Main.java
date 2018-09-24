@@ -55,13 +55,15 @@ public class Main extends Application {
         TextField textField = new TextField();
         Button subButton = new Button("Click me to do something");
         userSide.getChildren().addAll(title,description,textField,subButton);
-        userSide.setAlignment(Pos.CENTER_LEFT);
+        userSide.setAlignment(Pos.CENTER);
 
         VBox outPutWindow = new VBox();
 
         TextField outPut = new TextField();
         outPutWindow.getChildren().add(outPut);
-        outPutWindow.setAlignment(Pos.CENTER_RIGHT);
+        outPutWindow.setAlignment(Pos.CENTER);
+
+        subButton.setOnAction(event -> outPut.setText("Hi this button works"));
 
         Line seperator = LineBuilder.create().startX(width/2).startY(0).endX(width/2).endY(height).fill(Color.BLACK).build();
 
