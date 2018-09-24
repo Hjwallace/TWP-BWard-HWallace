@@ -15,6 +15,9 @@ import javafx.scene.shape.Line;
 import javafx.scene.shape.LineBuilder;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+import java.io.InputStream;
+
 public class Main extends Application {
     //HBOX = Horizontal organization
     //VBOX = Verticle organization
@@ -25,48 +28,26 @@ public class Main extends Application {
         int width = 700;
         int height = 400;
 
-        //VBox parent = new VBox();
-        //parent.getChildren().add(new Label("Hello World"));
 
-        //HBox urlArea = new HBox(new Label("URL:"));
-        //TextField textField = new TextField();
-        //urlArea.getChildren().add(textField);
 
-        //parent.getChildren().add(urlArea);
-
-        //Button button = new Button("Press me!");
-        //button.setOnAction(event -> System.out.println("You pressed me"));
-        //parent.getChildren().add(button);
-        //Line middleLine = LineBuilder.create().startX(350).startY(0).endX(350).endY(400).fill(Color.BLACK).build();
-        //parent.getChildren().add(middleLine);
-
-        //Scene scene = new Scene(new Label("Foo"));
-        //parent.setSpacing(50);
-        //parent.setAlignment(Pos.CENTER_LEFT);
-        //primaryStage.setScene(new Scene(parent,700,400));
-        //primaryStage.show();
-
+        //Windows
         HBox mainWindow = new HBox(20);
-
         VBox userSide = new VBox(20);
-
+        //User Componets
         Label title = new Label("I am a title");
         Label description = new Label("Put Text below me");
         TextField textField = new TextField();
         Button subButton = new Button("Click me to do something");
         userSide.getChildren().addAll(title,description,textField,subButton);
         userSide.setAlignment(Pos.CENTER);
-
+        //Output Componets
         VBox outPutWindow = new VBox();
-
         TextField outPut = new TextField();
         outPutWindow.getChildren().add(outPut);
         outPutWindow.setAlignment(Pos.CENTER);
-
         subButton.setOnAction(event -> outPut.setText("Hi this button works"));
-
+        //Line
         Line seperator = LineBuilder.create().startX(width/2).startY(0).endX(width/2).endY(height).fill(Color.BLACK).build();
-
         mainWindow.getChildren().addAll(userSide,seperator,outPutWindow);
 
         primaryStage.setScene(new Scene(mainWindow,width,height));//Place screen dimensions

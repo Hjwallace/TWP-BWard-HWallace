@@ -5,32 +5,33 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
-import org.xml.sax.SAXException;
-
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
-public class Parser {
+public class RevisionParser {
 
-    public JsonArray parse(InputStream input) throws IOException, SAXException {
+    List<Revision> parse(InputStream inputStream) {
         JsonParser parser = new JsonParser();
-        InputStream inputStream = getClass().getClassLoader().getResourceAsStream("testingData.json");
         Reader reader = new InputStreamReader(inputStream);
         JsonElement rootElement = parser.parse(reader);
         JsonObject rootObject = rootElement.getAsJsonObject();
         JsonObject pages = rootObject.getAsJsonObject("query").getAsJsonObject("pages");
         JsonArray array = null;
-        for (Map.Entry<String,JsonElement> entry : pages.entrySet()){
+        for(Map.Entry<String, JsonElement> entry : pages.entrySet()) {
             JsonObject entryObject = entry.getValue().getAsJsonObject();
             array = entryObject.getAsJsonArray("revisions");
-    }
-        //for (int i = 0; i<array.size();i++){
-         //   result.add(new Revision());
-       // }
-        return array;
+        }
+
+        List<Revision> revisionList = new ArrayList<Revision>();
+        assert array != null;
+        for (int i = 0; i<array.size(); i++) {
+            Revision revision = new Revision(array.get(0).getAsJsonObject());
+            revisionList.add(revision);
+        }
+        return revisionList;
     }
 }
-
