@@ -15,7 +15,11 @@ import javafx.scene.shape.Line;
 import javafx.scene.shape.LineBuilder;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.concurrent.atomic.AtomicReference;
+
+import static edu.bsu.cs222.URLConnectionReader.URLtoInputStream;
 
 public class Main extends Application {
     //HBOX = Horizontal organization
@@ -47,9 +51,19 @@ public class Main extends Application {
 
         //Set the wikiPageConnection with the button
         //subButton.setOnAction(event -> outPut.setText("Hi this button works"));
+
         subButton.setOnAction(event -> {
             final String wordToSearch = userField.getText();
             System.out.println(wordToSearch);
+
+            try {
+                InputStream wikiPageData = URLtoInputStream(wordToSearch);
+                System.out.println(wikiPageData);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            RevisionParser parser = new RevisionParser();
         });
 
 

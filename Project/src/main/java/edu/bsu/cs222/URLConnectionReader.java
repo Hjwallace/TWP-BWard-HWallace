@@ -10,7 +10,7 @@ import java.net.URLEncoder;
 
 public class URLConnectionReader {
 
-    static InputStream URLtoINputStream(String wikiSearch) throws IOException{
+    static InputStream URLtoInputStream(String wikiSearch) throws IOException{
         System.out.println("Searching "+wikiSearch+" on Wikipedia");
         wikiSearch = URLEncoder.encode(wikiSearch, "UTF16");
         String wikiResult = "https://en.wikipedia.org/w/api.php?action=query&format=json&prop=revisions&titles=" + wikiSearch + "&rvprop=timestamp|user&rvlimit=25&redirects";
