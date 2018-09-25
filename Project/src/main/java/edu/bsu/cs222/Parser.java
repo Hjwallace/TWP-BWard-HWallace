@@ -13,6 +13,8 @@ import java.io.InputStreamReader;
 import java.io.Reader;
 import java.util.Map;
 
+
+//Parses through data and returns the list of 25 people, requires an input stream
 public class Parser {
 
     public JsonArray parse(InputStream input) throws IOException, SAXException {
@@ -23,10 +25,12 @@ public class Parser {
         JsonObject rootObject = rootElement.getAsJsonObject();
         JsonObject pages = rootObject.getAsJsonObject("query").getAsJsonObject("pages");
         JsonArray array = null;
-        for (Map.Entry<String,JsonElement> entry : pages.entrySet()){
+
+        for (Map.Entry<String,JsonElement> entry : pages.entrySet())
+        {
             JsonObject entryObject = entry.getValue().getAsJsonObject();
             array = entryObject.getAsJsonArray("revisions");
-    }
+        }
         //for (int i = 0; i<array.size();i++){
          //   result.add(new Revision());
        // }

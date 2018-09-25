@@ -12,8 +12,9 @@ public class ParserTest {
     @Test
     public void testParse() {
         RevisionParser revisionParser = new RevisionParser();
-        InputStream inputStream = getClass().getClassLoader().getResourceAsStream("sampledata.json");
+        InputStream inputStream = getClass().getClassLoader().getResourceAsStream("testingData.json");
         String userResult = revisionParser.parse(inputStream).get(0).getUsername();
         Assert.assertEquals("SemiHypercube", userResult);
 
     }
+}
