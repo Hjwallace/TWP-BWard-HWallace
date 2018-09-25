@@ -27,8 +27,6 @@ public class Main extends Application {
         int width = 700;
         int height = 400;
 
-        //Declare page holder
-
 
         //Windows
         HBox mainWindow = new HBox(20);
@@ -36,9 +34,9 @@ public class Main extends Application {
         //User Componets
         Label title = new Label("WikiSearcher");
         Label description = new Label("Enter the word for the wiki page you want to investigate");
-        TextField textField = new TextField();
+        TextField userField = new TextField();
         Button subButton = new Button("Submit Search");
-        userSide.getChildren().addAll(title,description,textField,subButton);
+        userSide.getChildren().addAll(title,description,userField,subButton);
         userSide.setAlignment(Pos.CENTER);
         //Output Componets
         VBox outPutWindow = new VBox();
@@ -46,8 +44,13 @@ public class Main extends Application {
         outPutWindow.getChildren().add(outPut);
         outPutWindow.setAlignment(Pos.CENTER);
 
+
         //Set the wikiPageConnection with the button
-        subButton.setOnAction(event -> outPut.setText("Hi this button works"));
+        //subButton.setOnAction(event -> outPut.setText("Hi this button works"));
+        subButton.setOnAction(event -> {
+            final String wordToSearch = userField.getText();
+            System.out.println(wordToSearch);
+        });
 
 
         
@@ -58,6 +61,7 @@ public class Main extends Application {
 
         primaryStage.setScene(new Scene(mainWindow,width,height));//Place screen dimensions
         primaryStage.show();
+
 
     }
 }
