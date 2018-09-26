@@ -29,7 +29,7 @@ public class RevisionParser {
         List<Revision> revisionList = new ArrayList<Revision>();
         assert array != null;
         for (int i = 0; i<array.size(); i++) {
-            Revision revision = new Revision(array.get(0).getAsJsonObject());
+            Revision revision = new Revision(array.get(i).getAsJsonObject());
             revisionList.add(revision);
         }
         return revisionList;

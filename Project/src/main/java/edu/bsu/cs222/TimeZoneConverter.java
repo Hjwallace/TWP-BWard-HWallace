@@ -1,14 +1,20 @@
 package edu.bsu.cs222;
 
+import java.sql.Time;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.TimeZone;
 
 public class TimeZoneConverter {
-    public TimeZoneConverter() {
+
+    String timeStamp;
+    public TimeZoneConverter(String t) {
+        this.timeStamp = t;
+
     }
 
     public static void main(String[] args) {
+
         Calendar universalTime = new GregorianCalendar(TimeZone.getTimeZone("Universal"));
         int hour = universalTime.get(18);
         int minute = universalTime.get(30);

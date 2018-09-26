@@ -7,6 +7,7 @@ import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -15,6 +16,7 @@ import javafx.scene.shape.Line;
 import javafx.scene.shape.LineBuilder;
 import javafx.stage.Stage;
 
+import javax.swing.*;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
@@ -29,8 +31,8 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        int width = 700;
-        int height = 400;
+        int width = 900;
+        int height = 600;
 
 
         //Windows
@@ -45,7 +47,8 @@ public class Main extends Application {
         userSide.setAlignment(Pos.CENTER);
         //Output Componets
         VBox outPutWindow = new VBox();
-        TextField outPut = new TextField();
+        TextArea outPut = new TextArea();
+        outPut.setPrefSize(500,500);
         outPutWindow.getChildren().add(outPut);
         outPutWindow.setAlignment(Pos.CENTER);
 
@@ -70,10 +73,22 @@ public class Main extends Application {
             //String[] wikiUserData = (parser.parse(wikiPageData)).toArray(new String[0]);
 
             System.out.println(wikiUserData);
+            String name;
+            String time;
 
             for (int i = 0; i< wikiUserData.size();i++){
-                System.out.println(wikiUserData.get(i));
-                System.out.println(wikiUserData.get(i).getUsername());
+                System.out.println("------------------------------------");
+                System.out.println("Revisor " +(i+1)+": "+wikiUserData.get(i).getUsername());
+                System.out.println("Time of change: " +wikiUserData.get(i).getTimestamp());
+                System.out.println("------------------------------------");
+                name = wikiUserData.get(i).getUsername();
+                time =wikiUserData.get(i).getTimestamp();
+                outPut.appendText("---------------"+(i+1)+"-------------\n");
+                outPut.appendText(name+"\n");
+                outPut.appendText(time+"\n");
+                outPut.appendText("-------------------------------\n");
+
+
             }
 
 
