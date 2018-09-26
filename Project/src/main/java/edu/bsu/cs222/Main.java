@@ -17,6 +17,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.List;
 import java.util.concurrent.atomic.AtomicReference;
 
 import static edu.bsu.cs222.URLConnectionReader.URLtoInputStream;
@@ -56,15 +57,38 @@ public class Main extends Application {
             final String wordToSearch = userField.getText();
             System.out.println(wordToSearch);
 
+            InputStream wikiPageData = null;
             try {
-                InputStream wikiPageData = URLtoInputStream(wordToSearch);
+                wikiPageData = URLtoInputStream(wordToSearch);
                 System.out.println(wikiPageData);
             } catch (IOException e) {
                 e.printStackTrace();
             }
 
             RevisionParser parser = new RevisionParser();
-        });
+            List<Revision> wikiUserData = parser.parse(wikiPageData);
+            //String[] wikiUserData = (parser.parse(wikiPageData)).toArray(new String[0]);
+
+            System.out.println(wikiUserData);
+
+            for (int i = 0; i< wikiUserData.size();i++){
+                System.out.println(wikiUserData.get(i));
+                System.out.println(wikiUserData.get(i).getUsername());
+            }
+
+
+            /*First Test
+            for (int i = 0; i < wikiUserData.length; i++){
+                System.out.println("Straight from wikiUser data " +i+": "+wikiUserData[i]);
+
+                transfer = wikiUserData[i].toString();
+                System.out.println(i + "."+transfer);
+                message+=transfer;
+            }
+            */
+
+
+        });//End of button action
 
 
         
