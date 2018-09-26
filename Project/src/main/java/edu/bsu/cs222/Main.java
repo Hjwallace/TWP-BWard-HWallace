@@ -7,6 +7,7 @@ import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -15,6 +16,7 @@ import javafx.scene.shape.Line;
 import javafx.scene.shape.LineBuilder;
 import javafx.stage.Stage;
 
+import javax.swing.*;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
@@ -45,8 +47,8 @@ public class Main extends Application {
         userSide.setAlignment(Pos.CENTER);
         //Output Componets
         VBox outPutWindow = new VBox();
-        TextField outPut = new TextField();
-        outPut.setPrefSize(700,500);
+        TextArea outPut = new TextArea();
+        outPut.setPrefSize(500,500);
         outPutWindow.getChildren().add(outPut);
         outPutWindow.setAlignment(Pos.CENTER);
 
@@ -80,7 +82,12 @@ public class Main extends Application {
                 System.out.println("Time of change: " +wikiUserData.get(i).getTimestamp());
                 System.out.println("------------------------------------");
                 name = wikiUserData.get(i).getUsername();
-                outPut.appendText(name);
+                time =wikiUserData.get(i).getTimestamp();
+                outPut.appendText("---------------"+(i+1)+"-------------\n");
+                outPut.appendText(name+"\n");
+                outPut.appendText(time+"\n");
+                outPut.appendText("-------------------------------\n");
+
 
             }
 
