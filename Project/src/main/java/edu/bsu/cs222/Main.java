@@ -33,6 +33,8 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception {
         int width = 900;
         int height = 600;
+        Connection connection = new Connection();
+        boolean connectionStatus = connection.findConnection();
 
 
         //Windows
@@ -43,7 +45,20 @@ public class Main extends Application {
         Label description = new Label("Enter the word for the wiki page you want to investigate");
         TextField userField = new TextField();
         Button subButton = new Button("Submit Search");
-        userSide.getChildren().addAll(title,description,userField,subButton);
+        Label connectionTextBox = new Label("I am a label");
+
+        //------------Color Loop------------
+        if (connectionStatus){
+            connectionTextBox.setText("Connection is Present");
+            connectionTextBox.setTextFill(Color.color(0.0,1.0,0.0));
+        }
+        else {
+            connectionTextBox.setText("Connection is not Present");
+            connectionTextBox.setTextFill(Color.color(1.0,0.0,0.0));
+        }
+        //--------------------------------
+
+        userSide.getChildren().addAll(title,description,userField,subButton,connectionTextBox);
         userSide.setAlignment(Pos.CENTER);
         //Output Componets
         VBox outPutWindow = new VBox();
@@ -57,6 +72,8 @@ public class Main extends Application {
         //subButton.setOnAction(event -> outPut.setText("Hi this button works"));
 
         subButton.setOnAction(event -> {
+
+            outPut.clear();
             final String wordToSearch = userField.getText();
             System.out.println(wordToSearch);
 
@@ -77,30 +94,21 @@ public class Main extends Application {
             String time;
 
             for (int i = 0; i< wikiUserData.size();i++){
+                /*
                 System.out.println("------------------------------------");
                 System.out.println("Revisor " +(i+1)+": "+wikiUserData.get(i).getUsername());
                 System.out.println("Time of change: " +wikiUserData.get(i).getTimestamp());
                 System.out.println("------------------------------------");
+                */
                 name = wikiUserData.get(i).getUsername();
                 time =wikiUserData.get(i).getTimestamp();
-                outPut.appendText("---------------"+(i+1)+"-------------\n");
-                outPut.appendText(name+"\n");
-                outPut.appendText(time+"\n");
-                outPut.appendText("-------------------------------\n");
+                outPut.appendText("---------------"+(i+1)+"-------------------------\n");
+                outPut.appendText("Revisor " + i +": "+name+"\n");
+                outPut.appendText("Time of change: "+time+"\n");
+                outPut.appendText("-----------------------------------------\n");
 
 
             }
-
-
-            /*First Test
-            for (int i = 0; i < wikiUserData.length; i++){
-                System.out.println("Straight from wikiUser data " +i+": "+wikiUserData[i]);
-
-                transfer = wikiUserData[i].toString();
-                System.out.println(i + "."+transfer);
-                message+=transfer;
-            }
-            */
 
 
         });//End of button action
