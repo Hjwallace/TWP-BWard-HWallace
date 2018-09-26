@@ -29,8 +29,8 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        int width = 700;
-        int height = 400;
+        int width = 900;
+        int height = 600;
 
 
         //Windows
@@ -46,6 +46,7 @@ public class Main extends Application {
         //Output Componets
         VBox outPutWindow = new VBox();
         TextField outPut = new TextField();
+        outPut.setPrefSize(700,500);
         outPutWindow.getChildren().add(outPut);
         outPutWindow.setAlignment(Pos.CENTER);
 
@@ -70,10 +71,17 @@ public class Main extends Application {
             //String[] wikiUserData = (parser.parse(wikiPageData)).toArray(new String[0]);
 
             System.out.println(wikiUserData);
+            String name;
+            String time;
 
             for (int i = 0; i< wikiUserData.size();i++){
-                System.out.println(wikiUserData.get(i));
-                System.out.println(wikiUserData.get(i).getUsername());
+                System.out.println("------------------------------------");
+                System.out.println("Revisor " +(i+1)+": "+wikiUserData.get(i).getUsername());
+                System.out.println("Time of change: " +wikiUserData.get(i).getTimestamp());
+                System.out.println("------------------------------------");
+                name = wikiUserData.get(i).getUsername();
+                outPut.appendText(name);
+
             }
 
 
