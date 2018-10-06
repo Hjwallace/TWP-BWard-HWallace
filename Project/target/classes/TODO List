@@ -1,0 +1,15 @@
+-User Provides a word | Kinda CHECK - User can place a word and we just need to give it to the urlFinder
+
+-Program returns a list of the most recent 25 edits to the wiki page
+    -Includes the username/IP if anon and the time of their change localized to my timezone
+
+-If there is no page related to the word given, tell the user so
+
+-Allow for redirection (Biden -> Joe Biden) and tell the user if so has happened
+
+-Notify if there is no internet connection CHECK
+
+-Allow for sorting of 25 list
+    -Editor with the most changes
+    -Time stamps break ties
+    -Hello

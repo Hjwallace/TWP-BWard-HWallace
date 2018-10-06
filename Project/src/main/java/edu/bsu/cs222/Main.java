@@ -103,7 +103,7 @@ public class Main extends Application {
                 name = wikiUserData.get(i).getUsername();
                 time =wikiUserData.get(i).getTimestamp();
                 outPut.appendText("---------------"+(i+1)+"-------------------------\n");
-                outPut.appendText("Revisor " + i +": "+name+"\n");
+                outPut.appendText("Revisor " + (i+1) +": "+name+"\n");
                 outPut.appendText("Time of change: "+time+"\n");
                 outPut.appendText("-----------------------------------------\n");
 

@@ -6,7 +6,6 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.net.URLEncoder;
 
-//https://github.com/bsu-cs222-fall2018-dll/TWP_nabartling-jeshallcross-mwilliams16/blob/master/src/main/java/edu/bsu/cs222/URLConnectionReader.java
 
 public class URLConnectionReader {
 

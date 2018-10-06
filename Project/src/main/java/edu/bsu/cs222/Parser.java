@@ -31,9 +31,6 @@ public class Parser {
             JsonObject entryObject = entry.getValue().getAsJsonObject();
             array = entryObject.getAsJsonArray("revisions");
         }
-        //for (int i = 0; i<array.size();i++){
-         //   result.add(new Revision());
-       // }
         return array;
     }
 }
